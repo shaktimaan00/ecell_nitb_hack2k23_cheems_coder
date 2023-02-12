@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="style1.css">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/src/sha256.js"></script>
+    </head>
 </head>
 <body>
 
@@ -133,7 +136,21 @@
         selectedEmoji.innerHTML = "";
     });
 
+    let hashpass = (selected) => {
+        const Pass = selected.toString();
+        let pass = Pass.replace(new RegExp(",", "g"), "");
+        // const password = "secretPassword";
+        let hash = sha256(pass);
+        console.log(`Password hash: ${hash}`);
+        return hash;
+    }
+
 </script>
+
+<script>
+    
+</script>
+
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
@@ -177,22 +194,23 @@
     //         // ...
     //     }
     // });
+    
 
     submitData.addEventListener('click', (e) => {
 
-        const Pass = selected.toString();
-        let pass = Pass.replace(new RegExp(",", "g"), "");
-        console.log(pass);
+        let ans = hashpass(selected);
+        console.log(ans);
+
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
-        const c_pass = pass;
+        let c_pass = ans;
 
         //sign up user
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
                 const user = userCredential.user;
-                console.log(user.uid);
+                console.log("user id" + user.uid);
                 // ... user.uid
                 set(ref(database, 'users/' + user.uid), {
                     email: email,
@@ -205,8 +223,10 @@
                         // location.replace("../index.html");
                     })
                     .catch((error) => {
-                        // The write failed...
-                        // alert(error);
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        // ..
+                        alert(errorMessage);
                     });
             })
             .catch((error) => {
