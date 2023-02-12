@@ -44,37 +44,38 @@ section{
 .cont-left{
     /* position: relative; */
     width: 50%;
+    /* background: orange; */
+    border-radius: 25px;
 }
 
 /* .cont-left img{
     height: 430px;
     width: 100%;
-    border-radius: 15px;
 } */
 
 .cont-left .image{
+    /* object-fit: cover; */
     position: relative;
-    width: 100%;
-    background: url(./assests/new\ sign\ up.webp);
+    /* width: 100%; */
+    /* background: url(./assests/cheems.png); */
     height: 400px;
+    /* background: orange; */
     border-radius: 15px;
+    object-fit: contain;
 
 }
 
-.cont-left .image::after{
-    content: '';
+.cont-left img{
     position: absolute;
-    margin: 20px;
-    height: 360px;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    /* left: 10px; */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    top:0%;
+    left:0%;
+    width:100%;
+    margin-top: 2rem;
+    /* height:100%; */
+    object-fit:cover;
+    
 }
+
 
 /* .cont-left .mask{
     position: absolute;
@@ -133,11 +134,11 @@ section{
 }
 
 .cont-right{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     justify-content: center;
-    margin-left: 50px;
+    /* margin-left: 50px;
     text-align: left; */
     width: 50%;
 }
@@ -197,8 +198,8 @@ input[type="email"], input[type="password"]{
 .forget-password > button{
     border: none;
     background: transparent;
-    font-size: 12px;
-    color: #555;
+    font-size: 13px;
+    color: #333;
 }
 
 .forget-password > button:hover{
@@ -308,3 +309,38 @@ input[type="email"], input[type="password"]{
         width: 98%;
     }
 } 
+
+
+/* grid pattern */
+
+#gridContainer {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#gridContainer div {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+/*   font-size: 18px; */
+  font-size: 32px; /* increased size */
+  cursor: pointer;
+}
+
+.container2 button{
+    width: 100%;
+    margin: 25px 0;
+    padding: 9px 8px;
+    border-radius: 4px;
+    background: #041e2b;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+}
+
+.container2{
+    display: none;
+}

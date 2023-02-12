@@ -1,12 +1,25 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBo0y52gP6kc1krN3tXDYC-2NJLhFzJvyM",
-  authDomain: "fir-authentication-79f9b.firebaseapp.com",
-  databaseURL:
-    "https://fir-authentication-79f9b-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "fir-authentication-79f9b",
-  storageBucket: "fir-authentication-79f9b.appspot.com",
-  messagingSenderId: "349450255143",
-  appId: "1:349450255143:web:77d96fdb1552d4d46a8702",
+  apiKey: "AIzaSyAFIBXh1WnUJ-gTi61ruL4hYYTAngykEYc",
+  authDomain: "graphical-authentication-73a5e.firebaseapp.com",
+  projectId: "graphical-authentication-73a5e",
+  storageBucket: "graphical-authentication-73a5e.appspot.com",
+  messagingSenderId: "731182727348",
+  appId: "1:731182727348:web:cd08c8d26068088d39d7e1",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+// import {
+//   getAuth,
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   signOut,
+//   onAuthStateChanged,
+// } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+// import {
+//   getDatabase,
+//   set,
+//   ref,
+//   update,
+// } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
