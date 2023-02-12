@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/src/sha256.js"></script>
+  </head>
+  <body>
+    <!-- Your content here -->
+    <script>
+      window.onload = function() {
+        // Hash a password
+        const password = "secretPassword";
+        const hash = sha256(password);
+        console.log(`Password hash: ${hash}`);
+      };
+    </script>
+  </body>
+</html>
